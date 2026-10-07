@@ -31,4 +31,9 @@ public class EstadoConservacion {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+        @Override
+    public String toString() {
+        return "EstadoConservacion [id_estado=" + id_estado + ", nombre=" + nombre + "]";
+    }
 }
