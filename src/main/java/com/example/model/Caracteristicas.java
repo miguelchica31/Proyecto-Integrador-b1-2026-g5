@@ -36,7 +36,7 @@ public class Caracteristicas {
     
         @Override
     public String toString() {
-        return "Caracteristicas [id=" + id + ", Descripción=" + descripcion +"]";
+        return "Animal [id=" + id + ", Descripción=" + descripcion +"]";
     }
 
 }
