@@ -31,6 +31,7 @@ public class MainView extends VerticalLayout {
         tabSheet.add("Tipo de Animlal", crearSeccionEntidad1());
         tabSheet.add("Especie", crearSeccionEntidad2());
         tabSheet.add("Habitad", crearSeccionEntidad3());
+        tabSheet.add("Especie y Habitad", crearSeccionEntidad4());
 
         add(titulo, tabSheet);
     }
@@ -178,4 +179,51 @@ public class MainView extends VerticalLayout {
         layout.add(form, acciones, grid);
         return layout;
     }
+
+    // Método privado para gestionar la cuarta entidad
+    private Component crearSeccionEntidad4() {
+        VerticalLayout layout = new VerticalLayout();
+        layout.setPadding(false);
+
+        TextField idField = new TextField("ID - Especie");
+        TextField nombreField = new TextField("ID - Habitad");
+
+        FormLayout form = new FormLayout(idField, nombreField);
+
+        Button btnCrear = new Button("Crear", e -> 
+            Notification.show("Entidad 1 - Crear: " + nombreField.getValue())
+        );
+        btnCrear.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+
+        Button btnConsultar = new Button("Consultar", e -> 
+            Notification.show("Entidad 1 - Consultar ID: " + idField.getValue())
+        );
+
+        Button btnActualizar = new Button("Actualizar", e -> 
+            Notification.show("Entidad 1 - Actualizar ID: " + idField.getValue())
+        );
+
+        Button btnEliminar = new Button("Eliminar", e -> 
+            Notification.show("Entidad 1 - Eliminar ID: " + idField.getValue())
+        );
+        btnEliminar.addThemeVariants(ButtonVariant.LUMO_ERROR);
+
+        Button btnLimpiar = new Button("Limpiar", e -> {
+            idField.clear();
+            nombreField.clear();
+        });
+
+        HorizontalLayout acciones = new HorizontalLayout(
+            btnCrear, btnConsultar, btnActualizar, btnEliminar, btnLimpiar
+        );
+        acciones.getStyle().set("flex-wrap", "wrap");
+
+        Grid<String[]> grid = new Grid<>();
+        grid.addColumn(row -> row[0]).setHeader("ID").setAutoWidth(true);
+        grid.addColumn(row -> row[1]).setHeader("Nombre").setAutoWidth(true);
+
+        layout.add(form, acciones, grid);
+        return layout;
+    }
+
 }
