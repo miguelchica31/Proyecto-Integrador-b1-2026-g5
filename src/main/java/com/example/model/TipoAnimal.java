@@ -40,6 +40,6 @@ public class TipoAnimal {
     
     @Override
     public String toString() {
-        return "Usuario [id=" + id_tipo + ", nombre=" + nombre +"]";
+        return "Tipo Animal [id=" + id_tipo + ", nombre=" + nombre +"]";
     }
 }

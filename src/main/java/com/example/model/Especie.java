@@ -62,7 +62,7 @@ public class Especie {
 
     @Override
     public String toString(){
-        return "Usuario [id=" + id_especie + ", nombre=" + nombre + ", id_tipo=" + id_tipo + ", id_alimentacion=" + id_alimentacion + "]";
+        return "Especie [id=" + id_especie + ", nombre=" + nombre + ", id_tipo=" + id_tipo + ", id_alimentacion=" + id_alimentacion + "]";
     }
 
 

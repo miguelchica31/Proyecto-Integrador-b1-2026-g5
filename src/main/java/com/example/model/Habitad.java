@@ -40,7 +40,7 @@ public class Habitad {
 
     @Override
     public  String toString(){
-        return "Usuario [id=" + id_habitad + ", nombre=" + nombre + "]";
+        return "Habitad [id=" + id_habitad + ", nombre=" + nombre + "]";
     }
 
 }
