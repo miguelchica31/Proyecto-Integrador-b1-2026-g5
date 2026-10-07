@@ -2,12 +2,12 @@ package com.example.model;
 
 public class TipoAnimal {
 
-    private long id;
+    private long id_tipo;
     private String nombre;
 
-    public TipoAnimal(long id, String nombre){
+    public TipoAnimal(long id_tipo, String nombre){
 
-        this.id = id;
+        this.id_tipo = id_tipo;
         this.nombre = nombre;
 
     }
@@ -23,15 +23,15 @@ public class TipoAnimal {
     }
 
     public long getId() {
-        return id;
+        return id_tipo;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long id_tipo) {
+        this.id_tipo = id_tipo;
     }
 
     public void setNombre(String nombre) {
@@ -40,6 +40,6 @@ public class TipoAnimal {
     
     @Override
     public String toString() {
-        return "Usuario [id=" + id + ", nombre=" + nombre +"]";
+        return "Usuario [id=" + id_tipo + ", nombre=" + nombre +"]";
     }
 }
