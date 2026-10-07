@@ -15,4 +15,12 @@ public class EstadoConservacion {
 
     public EstadoConservacion() {
     }
+
+    public long getId_estado() {
+        return id_estado;
+    }
+
+    public void setId_estado(long id_estado) {
+        this.id_estado = id_estado;
+    }
 }
