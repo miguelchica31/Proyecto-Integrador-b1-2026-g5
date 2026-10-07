@@ -22,6 +22,25 @@ public class Habitad {
 
     }
 
-    
+    public long getId_habitad() {
+        return id_habitad;
+    }
+
+    public void setId_habitad(long id_habitad) {
+        this.id_habitad = id_habitad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public  String toString(){
+        return "Usuario [id=" + id_habitad + ", nombre=" + nombre + "]";
+    }
 
 }
