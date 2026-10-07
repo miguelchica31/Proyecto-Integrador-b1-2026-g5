@@ -30,6 +30,7 @@ public class MainView extends VerticalLayout {
 
         tabSheet.add("Tipo de Animlal", crearSeccionEntidad1());
         tabSheet.add("Especie", crearSeccionEntidad2());
+        tabSheet.add("Habitad", crearSeccionEntidad3());
 
         add(titulo, tabSheet);
     }
@@ -132,16 +133,15 @@ public class MainView extends VerticalLayout {
         return layout;
     }
 
-    // Método privado para gestionar la primera entidad
-    /* private Component crearSeccionEntidad1() {
+    // Método privado para gestionar la tercera entidad
+    private Component crearSeccionEntidad3() {
         VerticalLayout layout = new VerticalLayout();
         layout.setPadding(false);
 
         TextField idField = new TextField("ID");
         TextField nombreField = new TextField("Nombre");
-        TextField descripcionField = new TextField("Descripción");
 
-        FormLayout form = new FormLayout(idField, nombreField, descripcionField);
+        FormLayout form = new FormLayout(idField, nombreField);
 
         Button btnCrear = new Button("Crear", e -> 
             Notification.show("Entidad 1 - Crear: " + nombreField.getValue())
@@ -164,7 +164,6 @@ public class MainView extends VerticalLayout {
         Button btnLimpiar = new Button("Limpiar", e -> {
             idField.clear();
             nombreField.clear();
-            descripcionField.clear();
         });
 
         HorizontalLayout acciones = new HorizontalLayout(
@@ -175,9 +174,8 @@ public class MainView extends VerticalLayout {
         Grid<String[]> grid = new Grid<>();
         grid.addColumn(row -> row[0]).setHeader("ID").setAutoWidth(true);
         grid.addColumn(row -> row[1]).setHeader("Nombre").setAutoWidth(true);
-        grid.addColumn(row -> row[2]).setHeader("Descripción").setAutoWidth(true);
 
         layout.add(form, acciones, grid);
         return layout;
-    } */
+    }
 }
